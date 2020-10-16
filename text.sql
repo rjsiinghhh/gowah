@@ -3,7 +3,7 @@
 
 
 
-// have database named houses , MAKE TABLE NAMED HOMES AND RUN THIS FILE ILL FIX IT TO MAKE IT EASY FOR YALL 
+// have database named houses , MAKE TABLE NAMED HOMES AND RUN THIS FILE ILL FIX IT TO MAKE IT EASY FOR YALL
 
 
 
@@ -51,3 +51,39 @@ INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (17500000, '6 bedrooms', '7 bathrooms', '6902', '224', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISj758lfm0dcfv1000000000.jpg');
 
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (11000000, '7 bedrooms', '5.5 bathrooms', '5625', '3030', 'Pacific Ave', 'SF', 'CA', '94115', 'https://photos.zillowstatic.com/p_e/ISzjp042nnxyeq0000000000.jpg');
+
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (14200000, '4 bedrooms', '3.5 bathrooms', '6024', '2555', 'Union St', 'SF', 'CA', '94123', 'https://photos.zillowstatic.com/p_e/ISnu10w9hekuge0000000000.jpg');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (4195000, '4 bedrooms', '3.5 bathrooms', '3375', '519', 'Valley St', 'SF', 'CA', '94131', 'https://photos.zillowstatic.com/p_e/ISf87zq5ij14l20000000000.jpg');
+
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (1398000, '2 bedrooms', '1 bathrooms', '1176', '177', 'Idora Ave', 'SF', 'CA', '94127', 'https://photos.zillowstatic.com/p_e/IS72lr2yt69hfk1000000000.jpg');
+
+
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (4750000, '5 bedrooms', '4 bathrooms', '3575', '232', 'Clipper St', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/ISrhecpwf0cflv1000000000.jpg');
+
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (10000000, '6 bedrooms', '5 bathrooms', '18964', '67-69', 'Belcher St', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/ISjzy1yx9ygxs10000000000.jpg');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (3495000, '4 bedrooms', '3.5 bathrooms', '2917', '3741', '22nd St', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/IS7ua69y907xrw1000000000.jpg');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (2895000, '3 bedrooms', '2 bathrooms', '1900', '2459', 'Buchanan St', 'SF', 'CA', '94115', 'https://photos.zillowstatic.com/p_e/IS33z351i1hzaw1000000000.jpg');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (3798000, '2 bedrooms', '2 bathrooms', '3550', '917', 'Bryant St', 'SF', 'CA', '94103', 'https://photos.zillowstatic.com/p_e/ISvkrrpsh6g13q0000000000.jpg');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (1695000, '3 bedrooms', '2 bathrooms', '1367', '3917', '18th St', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/IS7msyoowrylmw1000000000.jpg');
+
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (3100000, '4 bedrooms', '6 bathrooms', '3253', '663', '22nd St', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/IS33nqu2uufwgt1000000000.jpg');
