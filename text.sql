@@ -1,3 +1,12 @@
+\c houses
+
+
+
+
+// have database named houses , MAKE TABLE NAMED HOMES AND RUN THIS FILE ILL FIX IT TO MAKE IT EASY FOR YALL 
+
+
+
 CREATE TABLE homes (id SERIAL, price INT, bedrooms VARCHAR(20), bathrooms VARCHAR(20), squareft VARCHAR(20), housenumber VARCHAR(15), streetname VARCHAR(30), city VARCHAR(25), state VARCHAR(5), zip VARCHAR(15), image_link TEXT);
 
 
@@ -27,7 +36,7 @@ INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (368008, '2 bedrooms', '2 bathrooms', '1196', '248', 'Lauren Ct', 'SF', 'CA', '94134', 'https://photos.zillowstatic.com/p_e/ISjzmw968hn6wp0000000000.jpg');
 
 
-INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (22000000, '6 bedrooms', '7.5 bathrooms', '7440', '150', 'Glenbrook Ave' 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/ISfofowqxjm21p1000000000.jpg');
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (22000000, '6 bedrooms', '7.5 bathrooms', '7440', '150', 'Glenbrook Ave', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/ISfofowqxjm21p1000000000.jpg');
 
 
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES (25000000, '5 bedrooms', '7.5 bathrooms', '7039', '435', 'Marina Blvd', 'SF', 'CA', '94123', 'https://photos.zillowstatic.com/p_e/ISfsmsvfkrzqy00000000000.jpg');
