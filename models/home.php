@@ -13,8 +13,11 @@ class Home {
     public $state;
     public $zip;
     public $image_link;
+    public $bid_price;
+    public $callback_phone;
+    public $set_date;
 
-    public function __construct($id, $price, $bedrooms, $bathrooms, $squareft,$housenumber,$streetname,$city, $state, $zip, $image_link){
+    public function __construct($id, $price, $bedrooms, $bathrooms, $squareft,$housenumber,$streetname,$city, $state, $zip, $image_link, $bid_price, $callback_phone, $set_date){
         $this->id =$id;
         $this->price = $price;
         $this->bedrooms = $bedrooms;
@@ -26,6 +29,9 @@ class Home {
         $this->state = $state;
         $this->zip = $zip;
         $this->image_link = $image_link;
+        $this->bid_price = $bid_price;
+        $this->callback_phone = $callback_phone;
+        $this->set_date = $set_date;
     }
 }
 
@@ -42,7 +48,7 @@ class Homes {
 
 
   static function update($updated_home){
-    $query = "UPDATE homes SET price = $2, bedrooms = $3, bathrooms = $4, squareft = $5, housenumber = $6, streetname = $7, city = $8, state = $9, zip = $10, image_link = $11, WHERE id = $1";
+    $query = "UPDATE homes SET price = $2, bedrooms = $3, bathrooms = $4, squareft = $5, housenumber = $6, streetname = $7, city = $8, state = $9, zip = $10, image_link = $11, bid_price = $12, callback_phone = $13, set_date = $14,  WHERE id = $1";
     $query_params = array(
       $updated_home->id,
       $updated_home->price,
@@ -54,13 +60,17 @@ class Homes {
       $updated_home->city,
       $updated_home->state,
       $updated_home->zip,
-      $updated_home->image_link);
+      $updated_home->image_link,
+      $updated_home->bid_price,
+      $updated_home->callback_phone,
+      $updated_home->set_date
+    );
     pg_query_params($query, $query_params);
     return self::all();
    }
 
   static function create($home){
-    $query = "INSERT INTO homes ( id, price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link) VALUES ($1, $2,$3,$4,$5,$6,$7,$8,$9,$10,$11)";
+    $query = "INSERT INTO homes (id, price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date ) VALUES ($1, $2,$3,$4,$5,$6,$7,$8,$9,$10,$11, $12, $13, $14 )";
     $query_params = array(
       $home->id,
       $home->price,
@@ -72,7 +82,11 @@ class Homes {
     $home->city,
     $home->state,
     $home->zip,
-    $home->image_link);
+    $home->image_link,
+    $home->bid_price,
+    $home->callback_phone,
+    $home->set_date
+  );
     pg_query_params($query, $query_params);
     return self::all();
 
@@ -98,7 +112,10 @@ class Homes {
                 $row_object->city,
                 $row_object->state,
                 $row_object->zip,
-                $row_object->image_link
+                $row_object->image_link,
+                $row_object->bid_price,
+                $row_object->callback_phone,
+                $row_object->set_date,
             );
 
             $homes[] = $new_home;
@@ -115,4 +132,4 @@ class Homes {
 
 
 
-?>
+ ?>
