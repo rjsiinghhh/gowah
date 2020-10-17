@@ -23,8 +23,7 @@ if($_REQUEST['action'] === 'index'){
       $body_object->image_link,
       $body_object->bid_price,
       $body_object->callback_phone,
-      $body_object->set_date
-    );
+      $body_object->set_date);
     $all_homes= Homes::create($new_home);
     echo json_encode($all_homes);
 
@@ -47,8 +46,7 @@ if($_REQUEST['action'] === 'index'){
     $body_object->image_link,
     $body_object->bid_price,
     $body_object->callback_phone,
-    $body_object->set_date
-  );
+    $body_object->set_date);
     $all_homes = Homes::update($updated_home);
     echo json_encode($all_homes);
 
