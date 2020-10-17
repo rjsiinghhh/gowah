@@ -11,7 +11,7 @@ if($_REQUEST['action'] === 'index'){
     $request_body = file_get_contents('php://input');
     $body_object = json_decode($request_body);
     $new_Home = new Home(null,
-       $body_object->price,
+      $body_object->price,
       $body_object->bedrooms,
       $body_object->bathrooms,
       $body_object->squareft,
@@ -20,7 +20,11 @@ if($_REQUEST['action'] === 'index'){
       $body_object->city,
       $body_object->state,
       $body_object->zip,
-      $body_object->image_link);
+      $body_object->image_link,
+      $body_object->bid_price,
+      $body_object->callback_phone,
+      $body_object->set_date
+    );
     $all_homes= Homes::create($new_home);
     echo json_encode($all_homes);
 
@@ -40,7 +44,11 @@ if($_REQUEST['action'] === 'index'){
     $body_object->city,
     $body_object->state,
     $body_object->zip,
-    $body_object->image_link);
+    $body_object->image_link,
+    $body_object->bid_price,
+    $body_object->callback_phone,
+    $body_object->set_date
+  );
     $all_homes = Homes::update($updated_home);
     echo json_encode($all_homes);
 
@@ -52,6 +60,9 @@ if($_REQUEST['action'] === 'index'){
   $all_homes = Homes::delete($_REQUEST['id']);
   echo json_encode($all_homes);
  }
+
+
+
 
 
 ?>
