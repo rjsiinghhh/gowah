@@ -1,10 +1,7 @@
-\c houses
-
-
-
 
 // have database named houses , MAKE TABLE NAMED HOMES AND RUN THIS FILE ILL FIX IT TO MAKE IT EASY FOR YALL
 
+(id, price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date)
 
 
 CREATE TABLE homes (id SERIAL, price INT, bedrooms VARCHAR(20), bathrooms VARCHAR(20), squareft VARCHAR(20), housenumber VARCHAR(15), streetname VARCHAR(30), city VARCHAR(25), state VARCHAR(5), zip VARCHAR(15), image_link TEXT, bid_price INT, callback_phone VARCHAR(15), set_date VARCHAR(10));
@@ -22,14 +19,9 @@ INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (895000, '4 bedrooms', '3 bathrooms', '1774', '1119', 'Hollister Ave', 'SF', 'CA', '94124', 'https://photos.zillowstatic.com/p_e/ISrdven8x372ly0000000000.jpg', 790000, '234-234-7544', '09-22-2020');
 
 
-
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (895000, '3 bedrooms', '2.5 bathrooms', '1764', '1572', 'Thomas Ave', 'SF', 'CA', '94124', 'https://photos.zillowstatic.com/p_e/ISf0tm5zrsp1q01000000000.jpg', 850340, '415-790-2313', '10-05-2020');
 
 
-
-
-//// left off hereee!
-GREEEEN STREET
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (28800000, '5 bedrooms', '8 bathrooms', '8630', '2590', 'Green St', 'SF', 'CA', '94123', 'https://photos.zillowstatic.com/p_e/ISrh6el81g7xg91000000000.jpg', 25600000, '239-504-2922', '10-16-2020');
 
 
