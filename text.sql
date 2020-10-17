@@ -8,7 +8,7 @@ CREATE TABLE homes (id SERIAL, price INT, bedrooms VARCHAR(20), bathrooms VARCHA
 
 
 
-INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (25000000, '4 bedrooms', '6.5 bathrooms', '10725', '190', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISr5p4lkel7cz71000000000.jpg', 22500380, '415-555-0321', '08/13/2020');
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (25000000, '4 bedrooms', '6.5 bathrooms', '10725', '190', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISr5p4lkel7cz71000000000.jpg', 22500380, '415-555-0321', '08-13-2020');
 
 
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (899000, '2 bedrooms', '2 bathrooms', '1012', '190', 'Alabama St', 'SF', 'CA', '94110', 'https://photos.zillowstatic.com/p_e/ISfcuvaik1m46o1000000000.jpg', 850000, '356-326-9382', '12-25-2020');
