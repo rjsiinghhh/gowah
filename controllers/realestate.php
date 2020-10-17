@@ -24,13 +24,10 @@ if($_REQUEST['action'] === 'index'){
     $all_homes= Homes::create($new_home);
     echo json_encode($all_homes);
 
-
-
-
   } else if ($_REQUEST['action'] === 'update'){
     $request_body = file_get_contents('php://input');
     $body_object= json_decode($request_body);
-    $updated_home = new Home($_REQUEST['id'],
+    $updated_home = new Homes($_REQUEST['id'],
     $body_object->price,
     $body_object->bedrooms,
     $body_object->bathrooms,
