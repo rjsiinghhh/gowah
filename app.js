@@ -71,7 +71,7 @@ class App extends React.Component {
         })
     }
     deleteHomes = (event) => {
-        axios.delete('/realestate/' + event.target.value).then(
+        axios.delete('/homes/' + event.target.value).then(
             (response) => {
                 this.setState(
                     {
@@ -85,7 +85,7 @@ class App extends React.Component {
         event.preventDefault();
         const id = event.target.getAttribute('id');
         axios.put(
-            '/realestate/'+id,
+            '/homes/'+id,
             {
                 price:this.state.updateHomesPrice,
                 bedrooms:this.state.updateHomesBedrooms,
@@ -113,7 +113,7 @@ class App extends React.Component {
         )
     }
     updateHomes = () => {
-        axios.get('/realestate').then(
+        axios.get('/homes').then(
             (response) => {
                 this.setState(
                     {

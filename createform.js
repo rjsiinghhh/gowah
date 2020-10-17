@@ -2,7 +2,7 @@ class CreateForm extends React.Component {
     createHomes = (event) => {
         event.preventDefault();
         axios.post(
-            '/realestate',
+            '/homes',
             {
                 price:this.state.updateHomesPrice,
                 bedrooms:this.state.updateHomesBedrooms,
