@@ -28,9 +28,6 @@ if($_REQUEST['action'] === 'index'){
     $all_homes= Homes::create($new_home);
     echo json_encode($all_homes);
 
-
-
-
   } else if ($_REQUEST['action'] === 'update'){
     $request_body = file_get_contents('php://input');
     $body_object= json_decode($request_body);
@@ -51,10 +48,6 @@ if($_REQUEST['action'] === 'index'){
   );
     $all_homes = Homes::update($updated_home);
     echo json_encode($all_homes);
-
-
-
-
 
   } else if ($_REQUEST['action'] === 'delete'){
   $all_homes = Homes::delete($_REQUEST['id']);
