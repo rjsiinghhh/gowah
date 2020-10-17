@@ -3,121 +3,121 @@ class App extends React.Component {
         homes: []
     }
     componentDidMount = () => {
-        this.updateHome();
+        this.updateHomes();
     }
-    changeUpdateHomesPrice = (event) => {
+    changeUpdateHomePrice = (event) => {
         this.setState({
-            updateHomesPrice:event.target.value
+            updateHomePrice:event.target.value
         })
     }
-    changeUpdateHomesBedrooms = (event) => {
+    changeUpdateHomeBedrooms = (event) => {
         this.setState({
-            updateHomesBedroom:event.target.value
+            updateHomeBedroom:event.target.value
         })
     }
-    changeUpdateHomesBathrooms = (event) => {
+    changeUpdateHomeBathrooms = (event) => {
         this.setState({
-            updateHomesBathrooms:event.target.value
+            updateHomeBathrooms:event.target.value
         })
     }
-    changeUpdateHomesSquareft = (event) => {
+    changeUpdateHomeSquareft = (event) => {
         this.setState({
-            updateHomesSquareft:event.target.value
+            updateHomeSquareft:event.target.value
         })
     }
-    changeUpdateHomesHouseNumber = (event) => {
+    changeUpdateHomeHouseNumber = (event) => {
         this.setState({
-            updateHomesHouseNumber:event.target.value
+            updateHomeHouseNumber:event.target.value
         })
     }
-    changeUpdateHomesStreetName = (event) => {
+    changeUpdateHomeStreetName = (event) => {
         this.setState({
-            updateHomesStreetName:event.target.value
+            updateHomeStreetName:event.target.value
         })
     }
-    changeUpdateHomesCity = (event) => {
+    changeUpdateHomeCity = (event) => {
         this.setState({
-            updateHomesCity:event.target.value
+            updateHomeCity:event.target.value
         })
     }
-    changeUpdateHomesState = (event) => {
+    changeUpdateHomeState = (event) => {
         this.setState({
-            updateHomesState:event.target.value
+            updateHomeState:event.target.value
         })
     }
-    changeUpdateHomesZip = (event) => {
+    changeUpdateHomeZip = (event) => {
         this.setState({
-            updateHomesZip:event.target.value
+            updateHomeZip:event.target.value
         })
     }
-    changeUpdateHomesImage_Link = (event) => {
+    changeUpdateHomeImage_Link = (event) => {
         this.setState({
-            updateHomesImage_Link:event.target.value
+            updateHomeImage_Link:event.target.value
         })
     }
-    changeUpdateHomesBid_Price = (event) => {
+    changeUpdateHomeBid_Price = (event) => {
         this.setState({
-            updateHomesBid_Price:event.target.value
+            updateHomeBid_Price:event.target.value
         })
     }
-    changeUpdateHomesCallBack_Phone = (event) => {
+    changeUpdateHomeCallBack_Phone = (event) => {
         this.setState({
-            updateHomesCallBack_Phone:event.target.value
+            updateHomeCallBack_Phone:event.target.value
         })
     }
-    changeUpdateHomesSet_Date = (event) => {
+    changeUpdateHomeSet_Date = (event) => {
         this.setState({
-            updateHomesSet_Date:event.target.value
+            updateHomeSet_Date:event.target.value
         })
     }
-    deleteHomes = (event) => {
+    deleteHome = (event) => {
         axios.delete('/homes/' + event.target.value).then(
             (response) => {
                 this.setState(
                     {
-                        home:response.data
+                        homes:response.data
                     }
                 )
             }
         )
     }
-    updateHomes = (event) => {
+    updateHome = (event) => {
         event.preventDefault();
         const id = event.target.getAttribute('id');
         axios.put(
             '/homes/'+id,
             {
-                price:this.state.updateHomesPrice,
-                bedrooms:this.state.updateHomesBedrooms,
-                bathrooms:this.state.updateHomesBathrooms,
-                squareft:this.state.updateHomesSquareft,
-                housenumber:this.state.updateHomesHouseNumber,
-                streetname:this.state.updateHomesStreetName,
-                city:this.state.updateHomesCity,
-                state:this.state.updateHomesState,
-                zip:this.state.updateHomesZip,
-                image_link:this.state.updateHomesImage_Link,
-                bid_price:this.state.updateHomesBid_Price,
-                callback_phone:this.state.updateHomesCallBack_Phone,
-                set_date:this.state.updateHomesSet_Date,
+                price:this.state.updateHomePrice,
+                bedrooms:this.state.updateHomeBedrooms,
+                bathrooms:this.state.updateHomeBathrooms,
+                squareft:this.state.updateHomeSquareft,
+                housenumber:this.state.updateHomeHouseNumber,
+                streetname:this.state.updateHomeStreetName,
+                city:this.state.updateHomeCity,
+                state:this.state.updateHomeState,
+                zip:this.state.updateHomeZip,
+                image_link:this.state.updateHomeImage_Link,
+                bid_price:this.state.updateHomeBid_Price,
+                callback_phone:this.state.updateHomeCallBack_Phone,
+                set_date:this.state.updateHomeSet_Date,
                     
             }
         ).then(
             (response) => {
                 this.setState(
                     {
-                        home:response.data
+                        homes:response.data
                     }
                 )
             }
         )
     }
-    updateHomes = () => {
+    updateHome = () => {
         axios.get('/homes').then(
             (response) => {
                 this.setState(
                     {
-                        home:response.data
+                        homes:response.data
                     }
                 )
             }
@@ -125,32 +125,32 @@ class App extends React.Component {
     }
     render = () => {
         return <div>
-            <CreateForm createCallback={this.updateHome}></CreateForm>
+            <CreateForm createCallback={this.updateHomes}></CreateForm>
             <h2>Houses for Sale!</h2>
             <ul>
                 {
-                    this.state.home.map(
-                        (homes) => {
+                    this.state.homes.map(
+                        (home) => {
                             return <li>
-                                {homes.price}: {homes.bedrooms}: {homes.bathrooms}: {homes.squareft}: {homes.housenumber}: {homes.streetname}: {homes.city}: {homes.state}: {homes.zip}: {homes.image_link}: {homes.bid_price}: {homes.callback_phone}: {homes.set_date}
-                                <button value={homes.id} onClick={this.deleteHomes}>
+                                {home.price}: {home.bedrooms}: {home.bathrooms}: {home.squareft}: {home.housenumber}: {home.streetname}: {home.city}: {home.state}: {home.zip}: {home.image_link}: {home.bid_price}: {home.callback_phone}: {home.set_date}
+                                <button value={home.id} onClick={this.deleteHome}>
                                     Delete
                                 </button>
-                                <form id={homes.id} onSubmit={this.updateHomes}>
-                                    <input onKeyUp={this.changeUpdateHomesPrice} type="number" placeholder="price" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesBedrooms} type="number" placeholder="bedrooms" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesBathrooms} type="number" placeholder="bathrooms" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesSquareft} type="number" placeholder="squareft" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesHouseNumber} type="number" placeholder="housenumber" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesStreetName} type="text" placeholder="streetname" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesCity} type="text" placeholder="city" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesState} type="text" placeholder="state" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesZip} type="number" placeholder="zip" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesImage_Link} type="image" placeholder="imagelink" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesBid_Price} type="number" placeholder="bidprice" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesCallBack_Phone} type="number" placeholder="callbackphone" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomesSet_Date} type="number" placeholder="setdate" /><br/>
-                                    <input type="submit" value="Update Homes" />
+                                <form id={home.id} onSubmit={this.updateHome}>
+                                    <input onKeyUp={this.changeUpdateHomePrice} type="number" placeholder="price" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeBedrooms} type="number" placeholder="bedrooms" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeBathrooms} type="number" placeholder="bathrooms" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeSquareft} type="number" placeholder="squareft" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeHouseNumber} type="number" placeholder="housenumber" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeStreetName} type="text" placeholder="streetname" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeCity} type="text" placeholder="city" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeState} type="text" placeholder="state" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeZip} type="number" placeholder="zip" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeImage_Link} type="image" placeholder="imagelink" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeBid_Price} type="number" placeholder="bidprice" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeCallBack_Phone} type="number" placeholder="callbackphone" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeSet_Date} type="number" placeholder="setdate" /><br/>
+                                    <input type="submit" value="Update Home" />
                                 </form>
                             </li>
                         }

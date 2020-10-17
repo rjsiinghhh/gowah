@@ -1,5 +1,5 @@
 <?php
-$dbconn = pg_connect('host=localhost dbname=houses');
+$dbconn = pg_connect("host=localhost dbname=houses");
 
 class Home {
     public $id;
@@ -72,8 +72,8 @@ class Homes {
   static function create($home){
     $query = "INSERT INTO homes (id, price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date ) VALUES ($1, $2,$3,$4,$5,$6,$7,$8,$9,$10,$11, $12, $13, $14 )";
     $query_params = array(
-      $home->id,
-      $home->price,
+    $home->id,
+    $home->price,
     $home->bedrooms,
     $home->bathrooms,
     $home->squareft,
