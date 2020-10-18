@@ -7,3 +7,16 @@ body {
     background-size: 125%;
     font-family: 'Inconsolata', monospace;
 }
+
+
+.card {
+  width: 40%;
+
+}
+
+.container{
+  margin: 5em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

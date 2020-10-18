@@ -1,89 +1,76 @@
-// class CreateForm extends React.Component {
-//   createHome = (event) => {
-//     event.preventDefault();
-//     axios.post(
-//       '/homes',
-//       {
-//         price: this.state.newHomePrice,
-//         bedrooms: this.state.newHomeBedrooms,
-//         bathrooms: this.state.newHomeBathrooms,
-//         squareft: this.state.newHomeSquareft,
-//         housenumber: this.state.newHomeHousenumber,
-//         streetname: this.state.newHomeStreetname,
-//         city: this.state.newHomeCity,
-//         state: this.state.newHomeState,
-//         zip: this.state.newHomeZip,
-//         image_link: this.state.newHomeImage_link
-//       }
-//     ).then(
-//       (response) => {
-//         this.props.createCallback();
-//       }
-//     )
-//   }
-//   ChangeNewHomePrice = (event) => {
-//     this.setState({
-//       newHomePrice: event.target.value
-//     })
-// }
-//   ChangeNewHomeBedrooms = (event) => {
-//     this.setState({
-//       newHomeBedrooms: event.target.value
-//     })
-// }
-//
-//   ChangeNewHomeBathrooms = (event) => {
-//     this.setState({
-//       newHomeBathrooms: event.target.value
-//     })
-// }
-//
-//   ChangeNewHomeSquareft = (event) => {
-//     this.setState({
-//       newHomeSquareft: event.target.value
-//     })
-// }
-//
-//   ChangeNewHomeHousenumber = (event) => {
-//     this.setState({
-//       newHomeHousenumber: event.target.value
-//     })
-// }
-//
-//   ChangeNewHomeStreetname = (event) => {
-//     this.setState({
-//       newHomeStreetname: event.target.value
-//     })
-// }
-//
-//   ChangeNewHomeCity = (event) => {
-//     this.setState({
-//       newHomeCity :event.target.value
-//     })
-// }
-//
-//   ChangeNewHomeState = (event) => {
-//     this.setState({
-//       newHomeState : event.target.value
-//     })
-// }
-//   Change
-//
-//
-//
-//
-//
+class App extends React.Component{
+  state = {
+    homes : []
+  }
+
+  componentDidMount = () => {
+    axios.get('/homes').then(
+      (response) => {
+        this.setState(
+          {
+            homes: response.data
+          }
+        )
+      }
+    )
+  }
+
+deleteHome = (event) => {
+  axios.delete('/homes/') + event.target.value).then(
+    (response) =>{
+      this.setState(
+        {
+          homes: response.data
+        }
+      )
+    }
+  )
+}
+
+updateHomes = (allPeople) => {
+  this.setState(
+    {
+      homes: allHomes
+    }
+  )
+}
 
 
+}
 
 
+render = () => {
+  return <div>
+  <CreateForm createCallback= {this.updateHomes}> </CreateForm>
+  <h2> Listings</h2>
+  <ul>
+  {
+    this.state.homes.map(
+      (home) => {
+        return <li>
+        {home.bid_price}: {home.callback_phone}
+        <button value={home.id} onClick={this.deleteHome}>
+        Delete
+        </button>
+        <UpdateForm
+        updateCallback={this.updateHomes}
+        home={home}>
+        </UpdateForm>
+        </li>
+      }
+    )
+  }
 
-
-
-
-
-
+  <ul>
+  </div>
 
 
 
 }
+
+
+
+ReactDOM.render(
+  <App></App>,
+  document.querySelector('main')
+)
