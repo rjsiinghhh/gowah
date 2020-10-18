@@ -1,8 +1,13 @@
+*{
+  color: #ffaaa5 ;
+  font-family: 'Inconsolata', monospace;
+}
+
 body {
     background-image: url("https://i.imgur.com/tHPecuS.jpg");
-    background-color: #C9A385;
+    background-color: #edffea;
     background-blend-mode: darken;
-    background-position: initial;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 125%;
     font-family: 'Inconsolata', monospace;
@@ -19,4 +24,5 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  color: white;
 }
