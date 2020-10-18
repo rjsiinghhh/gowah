@@ -76,30 +76,33 @@ class App extends React.Component {
                 {
                     this.state.homes.map(
                         (home) => {
-                            return <li>
-                                {home.price}
-                                < br/>
-                                {home.bedrooms}
-                                <br/> {home.bathrooms}
-                                <br/> {home.sqaureft}
-                                <br/> {home.housenumber}<br/>
-                                {home.streetname}<br/>
-                                {home.city}
-                                 <br/>{home.state}
-                                 {home.zip}
-                                 <br/> <img className="pics" src={home.image_link} alt="home-pics"/>
+                            return <div className="container">
+                            <li>
+                             <img className="pics" src={home.image_link} alt="home-pics"/>
+                                {home.price}<br/>
+                                {home.bedrooms}<br/>
+                                {home.bathrooms}<br/>
+                                {home.sqaureft}<br/>
+                                {home.housenumber}
+                                {home.streetname}
+                                {home.city}<br/>
+                                 {home.state}<br/>
+                                 {home.zip}<br/>
+
                                  <br/>{home.bid_price}
                                  <br/> {home.callback_phone}
-                                <button value={home.id} onClick={this.deleteHome}>
-                                    Delete
-                                </button>
+
                                 <form id={home.id} onSubmit={this.updateHome}>
                                     <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
                                     <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Phone Number" /><br/>
                                     <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
                                     <input type="submit" value="Update Bid" />
                                 </form>
+                                <button value={home.id} onClick={this.deleteHome}>
+                                    Delete
+                                </button>
                             </li>
+                            </div>
                         }
                     )
                 }
