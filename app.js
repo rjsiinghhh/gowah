@@ -70,13 +70,16 @@ class App extends React.Component {
     }
 
     render = () => {
-        return <div>
+        return (
+            <img src="https://i.imgur.com/kU1OKYf.png"/>
+        <div>
             <h2>Listings</h2>
             <ul>
                 {
                     this.state.homes.map(
                         (home) => {
-                            return <div className="container">
+                            return (
+                            <div className="container">
                             <li>
                              <img className="pics" src={home.image_link} alt="home-pics"/>
                                 {home.price}<br/>
@@ -103,6 +106,7 @@ class App extends React.Component {
                                 </button>
                             </li>
                             </div>
+                            )
                         }
                     )
                 }
