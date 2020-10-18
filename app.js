@@ -90,17 +90,18 @@ class App extends React.Component {
                                  {home.zip}<br/>
 
                                  Highest Bid: {home.bid_price}
-                                 <br/> {home.callback_phone}
+                                 <br/>For More Info {home.callback_phone}
 
                                 <form id={home.id} onSubmit={this.updateHome}>
                                     <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
                                     <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Phone Number" /><br/>
                                     <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
-                                    <input type="submit" value="Update Bid" />
+                                    <input type="submit" value="Make An Offer" />
                                 </form>
                                 <button value={home.id} onClick={this.deleteHome}>
                                     Delete
                                 </button>
+
                             </li>
                             </div>
                         }
