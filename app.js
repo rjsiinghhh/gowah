@@ -160,9 +160,9 @@ class App extends React.Component {
         </div>
     }
 }
-// const App = (props) => {
-//     return <h2>Functional {props.name}!</h2>
-// }
+const App = (props) => {
+    return <h2>Functional {props.name}!</h2>
+}
 ReactDOM.render(
     <App></App>,
     document.querySelector('main')

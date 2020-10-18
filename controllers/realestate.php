@@ -3,14 +3,12 @@ header('Content-Type: application/json');
 include_once __DIR__ . '/../models/home.php';
 
 if($_REQUEST['action'] === 'index'){
-    echo json_encode(Homes::all());
-
-
-
+    echo json_encode(Homes::all() );
   } else if ($_REQUEST['action'] === 'create'){
     $request_body = file_get_contents('php://input');
     $body_object = json_decode($request_body);
     $new_Home = new Home(null,
+      $body_object->id,
       $body_object->price,
       $body_object->bedrooms,
       $body_object->bathrooms,

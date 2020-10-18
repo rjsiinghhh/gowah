@@ -4,11 +4,6 @@ body {
     background-blend-mode: darken;
     background-position: initial;
     background-repeat: no-repeat;
-    background-size: 140%;
+    background-size: 125%;
     font-family: 'Inconsolata', monospace;
-}
-.header {
-    background-color: #C9A385;
-    padding: 1em;
-    margin: 1em;
 }

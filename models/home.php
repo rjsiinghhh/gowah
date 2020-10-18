@@ -103,7 +103,7 @@ class Homes {
 
             $new_home = new Home(
                 intval($row_object->id),
-                intval($row_object->price),
+                $row_object->price,
                 $row_object->bedrooms,
                 $row_object->bathrooms,
                 $row_object->squareft,
@@ -127,9 +127,5 @@ class Homes {
         return $homes;
     }
 }
-
-
-
-
 
  ?>

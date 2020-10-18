@@ -1,5 +1,5 @@
 class CreateForm extends React.Component {
-    createHome = (event) => {
+    createHome = () => {
         event.preventDefault();
         axios.post(
             '/homes',
@@ -93,20 +93,20 @@ class CreateForm extends React.Component {
         return <div>
             <h2>Create Homes</h2>
             <form onSubmit={this.createHome}>
-            <input onKeyUp={this.changeNewHomePrice} type="number" placeholder="price" /><br/>
-                                    <input onKeyUp={this.changeNewHomeBedrooms} type="number" placeholder="bedrooms" /><br/>
-                                    <input onKeyUp={this.changeNewHomeBathrooms} type="number" placeholder="bathrooms" /><br/>
-                                    <input onKeyUp={this.changeNewHomeSquareft} type="number" placeholder="squareft" /><br/>
-                                    <input onKeyUp={this.changeNewHomeHouseNumber} type="number" placeholder="housenumber" /><br/>
-                                    <input onKeyUp={this.changeNewHomeStreetName} type="text" placeholder="streetname" /><br/>
-                                    <input onKeyUp={this.changeNewHomeCity} type="text" placeholder="city" /><br/>
-                                    <input onKeyUp={this.changeNewHomeState} type="text" placeholder="state" /><br/>
-                                    <input onKeyUp={this.changeNewHomeZip} type="number" placeholder="zip" /><br/>
-                                    <input onKeyUp={this.changeNewHomeImage_Link} type="image" placeholder="imagelink" /><br/>
-                                    <input onKeyUp={this.changeNewHomeBid_Price} type="number" placeholder="bidprice" /><br/>
-                                    <input onKeyUp={this.changeNewHomeCallBack_Phone} type="number" placeholder="callbackphone" /><br/>
-                                    <input onKeyUp={this.changeNewHomeSet_Date} type="number" placeholder="setdate" /><br/>
-                <input type="submit" value="Create Home"/>
+                    <input onKeyUp={this.changeNewHomePrice} type="number" placeholder="price" /><br/>
+                    <input onKeyUp={this.changeNewHomeBedrooms} type="number" placeholder="bedrooms" /><br/>
+                    <input onKeyUp={this.changeNewHomeBathrooms} type="number" placeholder="bathrooms" /><br/>
+                    <input onKeyUp={this.changeNewHomeSquareft} type="number" placeholder="squareft" /><br/>
+                    <input onKeyUp={this.changeNewHomeHouseNumber} type="number" placeholder="housenumber" /><br/>
+                    <input onKeyUp={this.changeNewHomeStreetName} type="text" placeholder="streetname" /><br/>
+                    <input onKeyUp={this.changeNewHomeCity} type="text" placeholder="city" /><br/>
+                    <input onKeyUp={this.changeNewHomeState} type="text" placeholder="state" /><br/>
+                    <input onKeyUp={this.changeNewHomeZip} type="number" placeholder="zip" /><br/>
+                    <input onKeyUp={this.changeNewHomeImage_Link} type="image" placeholder="imagelink" /><br/>
+                    <input onKeyUp={this.changeNewHomeBid_Price} type="number" placeholder="bidprice" /><br/>
+                    <input onKeyUp={this.changeNewHomeCallBack_Phone} type="number" placeholder="callbackphone" /><br/>
+                    <input onKeyUp={this.changeNewHomeSet_Date} type="number" placeholder="setdate" /><br/>
+                    <input type="submit" value="Create Home"/>
             </form>
         </div>
     }
