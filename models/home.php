@@ -113,7 +113,7 @@ class Homes {
                 $row_object->state,
                 $row_object->zip,
                 $row_object->image_link,
-                $row_object->bid_price,
+                intval($row_object->bid_price),
                 $row_object->callback_phone,
                 $row_object->set_date,
             );

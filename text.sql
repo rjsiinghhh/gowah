@@ -1,7 +1,7 @@
 
 -- CREATE TABLE homes (id SERIAL, price INT, bedrooms VARCHAR(20), bathrooms VARCHAR(20), squareft VARCHAR(20), housenumber VARCHAR(15), streetname VARCHAR(30), city VARCHAR(25), state VARCHAR(5), zip VARCHAR(15), image_link TEXT, bid_price INT, callback_phone VARCHAR(15), set_date VARCHAR(10));
 
-
+Gowąh
 
 -- INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (25000000, '4 bedrooms', '6.5 bathrooms', '10725', '190', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISr5p4lkel7cz71000000000.jpg', 22500380, '415-555-0321', '08-13-2020');
 
