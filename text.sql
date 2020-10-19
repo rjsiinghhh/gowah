@@ -1,7 +1,7 @@
 \c houses
 
 
-Gowąh
+//Gowąh
 
 // have database named houses , MAKE TABLE NAMED HOMES AND RUN THIS FILE ILL FIX IT TO MAKE IT EASY FOR YALL
 
