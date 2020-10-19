@@ -4,7 +4,17 @@ class App extends React.Component {
     }
 
     componentDidMount = () => {
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+          });
         this.updateHomes();
+    }
+
+    openFunc = () => {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.getInstances(elems, this.options);
+        instances.open();
     }
 
     changeUpdateHomeName = (event) => {
@@ -69,6 +79,8 @@ class App extends React.Component {
         )
     }
 
+    
+
     render = () => {
         return <div>
         <div className="header-container">
@@ -85,27 +97,26 @@ class App extends React.Component {
                                 return <div className="container">
                                     <li>                           
                                         <img className="card-panel hoverable" src={home.image_link} alt="home-pics" width="400"/><br/>
-                                        <Collapsible accordion={false}>
-                                        <CollapsibleItem 
-                                        expanded={false} 
-                                        header="View More"
-                                        node="div"
-                                        >
-                                        ${home.price}<br/>
-                                        {home.bedrooms}<br/>
+                                        <ul className="collapsible">
+                                    <li>
+                                        <div onClick={this.openFunc} className="collapsible-header">View More</div>
+                                            <div className="collapsible-body"><span>
+                                                ${home.price}<br/>
+                                                {home.bedrooms}<br/>
                                         {home.bathrooms}<br/>
                                         {home.sqaureft}<br/>
                                         {home.housenumber}
                                         {home.streetname}
-                                        {home.city}<br/>
+                                        {home.city},
                                         {home.state}<br/>
                                         {home.zip}<br/>
 
                                         <br/>{home.bid_price}
                                         <br/> {home.callback_phone}
-                                        </CollapsibleItem>
-                                        </Collapsible>
-                                       
+                                        </span></div>
+                                    </li>
+                                    </ul>
+                                        
 
                                         <form id={home.id} onSubmit={this.updateHome}>
                                         <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
