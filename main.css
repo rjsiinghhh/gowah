@@ -1,9 +1,30 @@
 body {
-    background-image: url("https://i.imgur.com/tHPecuS.jpg");
-    background-color: #C9A385;
-    background-blend-mode: darken;
-    background-position: initial;
-    background-repeat: no-repeat;
-    background-size: 125%;
-    font-family: 'Inconsolata', monospace;
+    background-color: red;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 2em;
+}
+.header-container {
+    background-color: #d2c2b0;
+    margin: 1em;
+    padding: 2em;
+}
+
+.header {
+    background-color: #1e2024;
+    margin: 1em;
+}
+
+.pics {
+    width: 300px;
+}
+
+.big-container {
+    background-color: #d2c2b0;
+    padding: 1em;
+}
+
+.container {
+    float: left;
+    padding: 1em;
 }
