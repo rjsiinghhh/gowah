@@ -192,7 +192,7 @@ class App extends React.Component {
                   <label htmlFor="review">Review: </label>
                   <input id='review_content' type='text' onChange={this.bidChange} />
                   <br/>
-                  
+
                   <input className="submit" type="submit" value="Make An Offer" />
                 </form>
                 </details>
