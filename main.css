@@ -5,26 +5,30 @@ body {
     margin: 2em;
 }
 .header-container {
-    background-color: #d2c2b0;
+    background-color: #a6a6a6;
     margin: 1em;
     padding: 2em;
 }
 
 .header {
-    background-color: #1e2024;
+    background-color: #fffffe;
     margin: 1em;
 }
 
-.pics {
-    width: 300px;
-}
-
-.big-container {
-    background-color: #d2c2b0;
-    padding: 1em;
+li {
+    list-style-type: none;
 }
 
 .container {
     float: left;
-    padding: 1em;
+    padding: 2em;
+    background-color:#a6a6a6;
+    margin: auto;
+    width: 95%;
 }
+.pics {
+    width: 400px;
+    box-shadow: 5px 10px blue;
+    margin: 0px 0px 10px 0px;
+}
+
