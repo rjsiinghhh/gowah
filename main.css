@@ -4,12 +4,7 @@
 }
 
 body {
-    background-image: url("https://i.imgur.com/tHPecuS.jpg");
-    background-color: #edffea;
-    background-blend-mode: darken;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 125%;
+    background-color: white;
     font-family: 'Inconsolata', monospace;
 }
 
@@ -25,4 +20,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   color: white;
+}
+
+header{
+  text-align: center;
+
+}
+
+h2{
+  text-align: center;
 }
