@@ -7,3 +7,12 @@ body {
     background-size: 125%;
     font-family: 'Inconsolata', monospace;
 }
+.header {
+    background-color: #C9A385;
+    padding: 1em;
+    margin: 1em;
+}
+
+.logo {
+  width: 30%;
+}
