@@ -1,5 +1,3 @@
-import { Collapsible, CollapsibleItem } from 'react-materialize';
-
 class App extends React.Component {
     state = {
         homes: []
