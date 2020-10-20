@@ -1,3 +1,4 @@
+
 <?php
 header('Content-Type: application/json');
 include_once __DIR__ . '/../models/home.php';
@@ -23,9 +24,12 @@ if($_REQUEST['action'] === 'index'){
       $body_object->image_link,
       $body_object->bid_price,
       $body_object->callback_phone,
-      $body_object->set_date
-    );$all_homes= Homes::create($new_Home);
+      $body_object->set_date);
+    $all_homes= Homes::create($new_home);
     echo json_encode($all_homes);
+
+
+
 
   } else if ($_REQUEST['action'] === 'update'){
     $request_body = file_get_contents('php://input');
@@ -43,13 +47,20 @@ if($_REQUEST['action'] === 'index'){
     $body_object->image_link,
     $body_object->bid_price,
     $body_object->callback_phone,
-    $body_object->set_date
-  );$all_homes= Homes::update($updated_home);
-  echo json_encode($all_homes);
-} else if ($_REQUEST['action'] === 'delete'){
+    $body_object->set_date);
+    $all_homes = Homes::update($updated_home);
+    echo json_encode($all_homes);
+
+
+
+
+
+  } else if ($_REQUEST['action'] === 'delete'){
   $all_homes = Homes::delete($_REQUEST['id']);
   echo json_encode($all_homes);
  }
+
+
 
 
 

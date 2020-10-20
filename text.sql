@@ -1,7 +1,7 @@
 \c houses
 
 
-
+//Gowąh
 
 // have database named houses , MAKE TABLE NAMED HOMES AND RUN THIS FILE ILL FIX IT TO MAKE IT EASY FOR YALL
 
@@ -15,16 +15,16 @@ CREATE TABLE homes (id SERIAL, price INT, bedrooms VARCHAR(20), bathrooms VARCHA
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (25000000, '4 bedrooms', '6.5 bathrooms', '10725', '190', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISr5p4lkel7cz71000000000.jpg', 22500380, '415-555-0321', '08/13/2020');
 
 
-INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (899000, '2 bedrooms', '2 bathrooms', '1012', '190', 'Alabama St', 'SF', 'CA', '94110', 'https://photos.zillowstatic.com/p_e/ISfcuvaik1m46o1000000000.jpg', 850000, '356-326-9382', '12-25-2020');
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (25000000, '4 bedrooms', '6.5 bathrooms', '10725', '190', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISr5p4lkel7cz71000000000.jpg', 22500380, '415-555-0321', '08/13/2020');
 
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (399449, '2 bedrooms', '1 bathrooms', '852', '501', 'Beale St UNIT 11F', 'SF', 'CA', '94105', 'https://photos.zillowstatic.com/p_e/ISrxyuttuhw4fg0000000000.jpg', 375000, '916-799-5611', '03-20-2020');
 
 
-INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (895000, '4 bedrooms', '3 bathrooms', '1774', '1119', 'Hollister Ave', 'SF', 'CA', '94124', 'https://photos.zillowstatic.com/p_e/ISrdven8x372ly0000000000.jpg', 790000, '234-234-7544', '09-22-2020');
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (399449, '2 bedrooms', '1 bathrooms', '852', '501', 'Beale St UNIT 11F', 'SF', 'CA', '94105', 'https://photos.zillowstatic.com/p_e/ISrxyuttuhw4fg0000000000.jpg', 375000, '916-799-5611', '03-20-2020');
 
 
 
-INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (895000, '3 bedrooms', '2.5 bathrooms', '1764', '1572', 'Thomas Ave', 'SF', 'CA', '94124', 'https://photos.zillowstatic.com/p_e/ISf0tm5zrsp1q01000000000.jpg', 850340, '415-790-2313', '10-05-2020');
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (399449, '2 bedrooms', '1 bathrooms', '852', '501', 'Beale St UNIT 11F', 'SF', 'CA', '94105', 'https://photos.zillowstatic.com/p_e/ISrxyuttuhw4fg0000000000.jpg', 375000, '916-799-5611', '03-20-2020');
 
 
 
@@ -88,20 +88,3 @@ INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname
 
 
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (3100000, '4 bedrooms', '6 bathrooms', '3253', '663', '22nd St', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/IS33nqu2uufwgt1000000000.jpg', 2900500, '916-292-3093', '09-20-2020');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-id, price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date, home_id
