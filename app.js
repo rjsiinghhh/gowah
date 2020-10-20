@@ -99,16 +99,6 @@ class App extends React.Component {
       })
     }
 
-phoneChange = (event) => {
-  const callback_phone = this.state.home.callback_phone;
-  const phoneInput = event.target.parentElement.querySelector('#home_id')
-  callback_phone.home_id = phoneInput.value;
-  callback_phone[event.target.id] = event.target.value
-  this.setState({
-    callback_phone: callback_phone
-  })
-}
-
 
 
 
@@ -143,7 +133,10 @@ phoneChange = (event) => {
                                  <br/>For More Info {home.callback_phone}
 
                                 <form id={home.id} onSubmit={this.updateHome}>
-
+                                    <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Number" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
+                                    <input type="submit" value="Make An Offer" />
                                 </form>
                                 <button value={home.id} onClick={this.deleteHome}>
                                     Delete
@@ -191,17 +184,16 @@ phoneChange = (event) => {
                 }
 
                 <summary>Make An Offer?</summary>
-
                 <form onSubmit={this.createBid}>
                   <input id='home_id' type='hidden' value={home.id} />
-                  <label htmlFor="name">Offer </label>
-                  <input id='amount' type='text' onChange={this.bidChange} />
+                  <label htmlFor="name">Name: </label>
+                  <input id='name' type='text' onChange={this.bidChange} />
                   <br/>
                   <label htmlFor="review">Review: </label>
                   <input id='review_content' type='text' onChange={this.bidChange} />
                   <br/>
 
-                  <input className="submit" type="Send It!" value="Make An Offer" />
+                  <input className="submit" type="submit" value="Make An Offer" />
                 </form>
                 </details>
 
