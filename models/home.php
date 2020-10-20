@@ -15,7 +15,7 @@ if(getenv('DATABASE_URL')){ // if using the heroku database
 		"dbname=".$gowahhomes
 	);
 } else { // if using the local database, change the dbname to be whatever your local database's name is
-	$dbconn = pg_connect("host=localhost dbname=phpapi");
+	$dbconn = pg_connect("host=localhost dbname=gowahhomes");
 }
 
 
