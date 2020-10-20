@@ -14,7 +14,6 @@ class App extends React.Component {
     }
 
 
-
     componentDidMount = () => {
         this.updateHomes();
     }
@@ -106,21 +105,24 @@ class App extends React.Component {
         return <div>
 
             <div className="container">
-              <ul>
+                <div className="row">
+              
                 {
                     this.state.homes.map(
                         (home) => {
-                            return <div className="container">
+                            return <div className="col m6">                                        
 
-                            <li>
-
-                             <img className="pics" src={home.image_link} alt="home-pics"/><br/>
+                               <div className="card">
+                               <div className="card-image"><img src={home.image_link} alt="home-pics"/><br/></div>
+                                 <div className="card-content">
                                 Asking ${home.price}<br/>
                                 {home.housenumber}<br/>
                                 {home.streetname}<br/>
                                 {home.city},
                                  {home.state}<br/>
+                            
                                 <details>
+                            
                                 {home.bedrooms}<br/>
                                 {home.bathrooms}<br/>
                                 Square FT:{home.squareft}
@@ -196,9 +198,10 @@ class App extends React.Component {
                   <input className="submit" type="submit" value="Make An Offer" />
                 </form>
                 </details>
-
-
-                            </li>
+                            
+                            </div>
+                            </div>
+                            
 
 
                             </div>
@@ -207,8 +210,8 @@ class App extends React.Component {
                         }
                     )
                 }
-                </ul>
-
+                
+                </div>
             </div>
 
         </div>

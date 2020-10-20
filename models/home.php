@@ -1,6 +1,6 @@
 
 <?php
-$dbconn = pg_connect('host=localhost dbname=houses');
+$dbconn = pg_connect('host=localhost port=5433 dbname=houses');
 
 class Home {
     public $id;

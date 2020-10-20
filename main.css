@@ -24,15 +24,17 @@ li {
     list-style-type: none;
 }
 
+/* .left {
+    display: inline-block;
+    margin: 0px;
+}
+
+/* .card {
+    width: 50%;
+    margin: 0px;
+    border-bottom-color: #d9d9d9;
+} */
+
 .container {
-    float: left;
-    padding: 2em;
-    background-color:#a6a6a6;
-    margin: auto;
-    width: 95%;
-}
-.pics {
-    width: 400px;
-    box-shadow: 5px 10px blue;
-    margin: 0px 0px 10px 0px;
-}
+    width: 100%;
+} 
