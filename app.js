@@ -142,8 +142,8 @@ class App extends React.Component {
                                     Delete
                                 </button>
                                 {
-                                          this.state.homes.filter(home => {
-                                            return home.bid_price == home.id
+                          this.state.homes.filter(home => {
+                          return home.bid_price == home.id
                                           })
 
                                 .map((home, i) => {
@@ -151,7 +151,6 @@ class App extends React.Component {
                       <div key={i}>
                         <p>Name: {home.bid_price}</p>
                         <p>Rating: {home.callback_phone}</p>
-                        <p>Review: {home.set_date}</p>
                         <details>
                         <summary>Edit Bid</summary>
                         <form id={home._id} onSubmit={this.updateHome}>
@@ -163,8 +162,7 @@ class App extends React.Component {
                           onChange={this.handleChange}
                           placeholder={home.bid_price}
                         />
-                        <br />
-                        <label htmlFor="review_content">Review</label>
+
                         <br />
                         <input
                           type="text"
@@ -180,8 +178,10 @@ class App extends React.Component {
                         </details>
                       </div>
 
+
                   })
                 }
+
 
                 <summary>Make An Offer?</summary>
                 <form onSubmit={this.createBid}>
@@ -196,6 +196,7 @@ class App extends React.Component {
                   <input className="submit" type="submit" value="Make An Offer" />
                 </form>
                 </details>
+
 
 
                             </li>
