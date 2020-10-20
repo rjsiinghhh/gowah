@@ -90,4 +90,7 @@ INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname
 
 
 INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (3100000, '4 bedrooms', '6 bathrooms', '3253', '663', '22nd St', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/IS33nqu2uufwgt1000000000.jpg', 2900500, '916-292-3093', '09-20-2020');
+<<<<<<< HEAD
 >>>>>>> 8299b94ab81e35ad5e98eee8c4d884da2e294d77
+=======
+>>>>>>> 4e4cd9bec506280f96cf015083376f9acd48a66d
