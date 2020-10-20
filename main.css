@@ -1,14 +1,22 @@
 *{
   font-family: 'Raleway', sans-serif;
+  cursor: crosshair;
 }
 
-
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: #e0ece4;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     margin: 2em;
 }
+
+main {
+    flex: 1 0 auto;
+}
+
 .header-container {
     background-color: #a6a6a6;
     margin: 1em;
@@ -24,17 +32,27 @@ li {
     list-style-type: none;
 }
 
-/* .left {
-    display: inline-block;
-    margin: 0px;
-}
-
-/* .card {
-    width: 50%;
-    margin: 0px;
-    border-bottom-color: #d9d9d9;
-} */
-
 .container {
     width: 100%;
 } 
+
+.input-field input[type=text]:focus + label {
+    color: #e0ece4 !important;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #e8b2af !important;
+    box-shadow: 0 2px 0 0 #d9d9d9 !important;
+  }
+
+.findbtn {
+    background-color: #e8b2af;
+}
+
+.findbtn:hover {
+    background-color: #d9d9d9;
+}
+
+.page-footer {
+    background-color: #e8b2af;
+}
