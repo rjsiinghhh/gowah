@@ -1,18 +1,33 @@
 body {
+    background-color: rgb(255, 0, 0, 0.5);
     text-align: center;
-    background-color:red;
-    background-blend-mode: darken;
-    background-position: initial;
-    background-repeat: no-repeat;
-    background-size: 140%;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 2em;
 }
+.header-container {
+    background-color: #a6a6a6;
+    margin: 1em;
+    padding: 2em;
+}
+
 .header {
-    background-color: #C9A385;
-    padding: 1em;
+    background-color: #fffffe;
     margin: 1em;
 }
 
-.logo {
-  width: 30%;
+li {
+    list-style-type: none;
+}
+
+.container {
+    float: left;
+    padding: 2em;
+    background-color:#a6a6a6;
+    margin: auto;
+    width: 95%;
+}
+.pics {
+    width: 400px;
+    box-shadow: 5px 10px blue;
+    margin: 0px 0px 10px 0px;
 }

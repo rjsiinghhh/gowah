@@ -191,7 +191,7 @@ phoneChange = (event) => {
                 }
 
                 <summary>Make An Offer?</summary>
-                
+
                 <form onSubmit={this.createBid}>
                   <input id='home_id' type='hidden' value={home.id} />
                   <label htmlFor="name">Offer </label>
