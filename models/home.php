@@ -12,7 +12,7 @@ if(getenv('DATABASE_URL')){ // if using the heroku database
 		"user=".$user." ".
 		"password=".$password." ".
 		"port=".$port." ".
-		"dbname=".$gowahhomes
+		"dbname=".
 	);
 } else { // if using the local database, change the dbname to be whatever your local database's name is
 	$dbconn = pg_connect("host=localhost dbname=gowahhomes");
