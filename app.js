@@ -115,7 +115,7 @@ class App extends React.Component {
                             <li>
 
                              <img className="pics" src={home.image_link} alt="home-pics"/><br/>
-                                Asking ${home.price}<br/>
+                                Asking Price: ${home.price}<br/>
                                 {home.housenumber}<br/>
                                 {home.streetname}<br/>
                                 {home.city},
