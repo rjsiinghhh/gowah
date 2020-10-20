@@ -53,7 +53,7 @@ class App extends React.Component {
         axios.put(
             '/homes/'+id,
             {
-                bid_price:this.state.updateHomeBid_price,
+                bid_price:this.state.updateHomePrice,
                 callback_phone:this.state.updateHomeCallback_phone,
                 set_date: this.state.updateHomeSet_date
             }
@@ -89,7 +89,7 @@ class App extends React.Component {
 
 
     bidChange = (event) => {
-      const bid_price = this.state.home.bid_price;
+      const bid_price = this.state.home.price;
       const bidInput = event.target.parentElement.querySelector('#home_id') // Have to find specific restaurant input element
       bid_price.home_id = bidInput.value;
       bid_price[event.target.id] = event.target.value
@@ -122,7 +122,7 @@ class App extends React.Component {
                                  {home.state}<br/>
                                   {home.zip}<br/>
                                 <details>
-                            
+
                                 {home.bedrooms}<br/>
                                 {home.bathrooms}<br/>
                                 Square FT:{home.squareft}<br />
@@ -142,13 +142,13 @@ class App extends React.Component {
 
                                 {
                                           this.state.homes.filter(home => {
-                                            return home.bid_price == home.id
+                                            return home.price == home.id
                                           })
 
                                 .map((home, i) => {
 
                       <div key={i}>
-                        <p>Name: {home.bid_price}</p>
+                        <p>Name: {home.price}</p>
                         <p>Rating: {home.callback_phone}</p>
                         <p>Review: {home.set_date}</p>
                         <details>
@@ -210,14 +210,24 @@ class App extends React.Component {
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+
+                  <li><a class="grey-text text-lighten-3" href="https://www.redfin.com/city/17151/CA/San-Francisco/housing-market">SF Housing Trends</a> </li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.bayareamarketreports.com/trend/san-francisco-home-prices-market-trends-news">Post Pandemic Bay Area Housing Stats</a> </li>
+                  </ul>
+                  <h5 class="white-text">Cast & Crew</h5>
+                  <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/arjunsinghh/">RJ</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/molly-haughey/">Molly</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/alex-volokhov/">Alex</a></li>
+
+
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
+            Gowąh
             © MRA 2020
             </div>
           </div>
