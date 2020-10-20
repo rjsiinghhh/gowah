@@ -122,18 +122,21 @@ class App extends React.Component {
                                  {home.state}<br/>
                                   {home.zip}<br/>
                                 <details>
+                            
                                 {home.bedrooms}<br/>
                                 {home.bathrooms}<br/>
                                 Square FT:{home.squareft}<br />
                                  Highest Bid: {home.bid_price}
                                  <br/>For More Info {home.callback_phone}<br />
                                  <form id={home.id} onSubmit={this.updateHome}>
+                                     <div className="input-field">
                                   <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
                                   <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Number" /><br/>
                                   <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
-                                  <input type="submit" value="Make An Offer" />
+                                  <input className="btn waves-effect waves-white findbtn" type="submit" value="Make An Offer" />
+                                  </div>
                                     </form>
-                                  <button value={home.id} onClick={this.deleteHome}>
+                                  <button className="btn waves-effect waves-white findbtn" value={home.id} onClick={this.deleteHome}>
                                           Sold!
                                                                 </button>
 
@@ -194,10 +197,31 @@ class App extends React.Component {
                         }
                     )
                 }
-
                 </div>
             </div>
-
+            <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Acknowledgements</h5>
+                <p class="grey-text text-lighten-4">Thanks to GA instructors and TAs for your help with this project!<br/>
+                </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © MRA 2020
+            </div>
+          </div>
+        </footer>
         </div>
     }
 
