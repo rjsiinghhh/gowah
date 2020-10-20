@@ -3,6 +3,18 @@ class App extends React.Component {
         homes: []
     }
 
+
+    createBid = (event) => {
+     event.preventDefault()
+     axios.post('/homes', this.state.review).then(response => {
+       this.setState({
+         homes: response.data
+       })
+     })
+    }
+
+
+
     componentDidMount = () => {
         this.updateHomes();
     }
@@ -68,46 +80,139 @@ class App extends React.Component {
         )
     }
 
+
+    handleChange = (event) => {
+      this.setState({
+          [event.target.id]: event.target.value
+      })
+    }
+
+
+    bidChange = (event) => {
+      const bid_price = this.state.home.bid_price;
+      const bidInput = event.target.parentElement.querySelector('#home_id') // Have to find specific restaurant input element
+      bid_price.home_id = bidInput.value;
+      bid_price[event.target.id] = event.target.value
+      this.setState({
+        bid_price: bid_price
+      })
+    }
+
+
+
+
     render = () => {
         return <div>
-            <h2>Listings</h2>
-            <ul>
+
+            <div className="container">
+              <ul>
                 {
                     this.state.homes.map(
                         (home) => {
                             return <div className="container">
+
                             <li>
-                             <img className="pics" src={home.image_link} alt="home-pics"/>
-                                {home.price}<br/>
+
+                             <img className="pics" src={home.image_link} alt="home-pics"/><br/>
+                                Asking ${home.price}<br/>
+                                {home.housenumber}<br/>
+                                {home.streetname}<br/>
+                                {home.city},
+                                 {home.state}<br/>
+                                <details>
                                 {home.bedrooms}<br/>
                                 {home.bathrooms}<br/>
-                                {home.sqaureft}<br/>
-                                {home.housenumber}
-                                {home.streetname}
-                                {home.city}<br/>
-                                 {home.state}<br/>
+                                Square FT:{home.squareft}
+
+
+
                                  {home.zip}<br/>
 
-                                 <br/>{home.bid_price}
-                                 <br/> {home.callback_phone}
+                                 Highest Bid: {home.bid_price}
+                                 <br/>For More Info {home.callback_phone}
 
                                 <form id={home.id} onSubmit={this.updateHome}>
                                     <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Phone Number" /><br/>
+                                    <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Number" /><br/>
                                     <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
-                                    <input type="submit" value="Update Bid" />
+                                    <input type="submit" value="Make An Offer" />
                                 </form>
                                 <button value={home.id} onClick={this.deleteHome}>
                                     Delete
                                 </button>
+                                {
+                                          this.state.homes.filter(home => {
+                                            return home.bid_price == home.id
+                                          })
+
+                                .map((home, i) => {
+
+                      <div key={i}>
+                        <p>Name: {home.bid_price}</p>
+                        <p>Rating: {home.callback_phone}</p>
+                        <p>Review: {home.set_date}</p>
+                        <details>
+                        <summary>Edit Bid</summary>
+                        <form id={home._id} onSubmit={this.updateHome}>
+                        <label htmlFor="name">Name</label>
+                        <br />
+                        <input
+                          type="text"
+                          id="name"
+                          onChange={this.handleChange}
+                          placeholder={home.bid_price}
+                        />
+                        <br />
+                        <label htmlFor="review_content">Review</label>
+                        <br />
+                        <input
+                          type="text"
+                          id="review_content"
+                          onChange={this.handleChange}
+                          placeholder={home.callback_phone}
+                        />
+
+                        <br />
+                        <input className="submit" type="submit" value="Edit Review" />
+                      </form>
+                      <button onClick={this.deleteHome} id={home._id}>delete</button>
+                        </details>
+                      </div>
+
+                  })
+                }
+
+                <summary>Make An Offer?</summary>
+                <form onSubmit={this.createBid}>
+                  <input id='home_id' type='hidden' value={home.id} />
+                  <label htmlFor="name">Name: </label>
+                  <input id='name' type='text' onChange={this.bidChange} />
+                  <br/>
+                  <label htmlFor="review">Review: </label>
+                  <input id='review_content' type='text' onChange={this.bidChange} />
+                  <br/>
+
+                  <input className="submit" type="submit" value="Make An Offer" />
+                </form>
+                </details>
+
+
                             </li>
+
+
                             </div>
+
+
                         }
                     )
                 }
-            </ul>
+                </ul>
+
+            </div>
+
         </div>
     }
+
 }
 
 

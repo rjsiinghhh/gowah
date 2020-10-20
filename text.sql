@@ -1,7 +1,7 @@
 
 -- CREATE TABLE homes (id SERIAL, price INT, bedrooms VARCHAR(20), bathrooms VARCHAR(20), squareft VARCHAR(20), housenumber VARCHAR(15), streetname VARCHAR(30), city VARCHAR(25), state VARCHAR(5), zip VARCHAR(15), image_link TEXT, bid_price INT, callback_phone VARCHAR(15), set_date VARCHAR(10));
 
-Gowąh
+//Gowąh
 
 -- INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (25000000, '4 bedrooms', '6.5 bathrooms', '10725', '190', 'Sea Cliff Ave', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/ISr5p4lkel7cz71000000000.jpg', 22500380, '415-555-0321', '08-13-2020');
 
@@ -73,4 +73,21 @@ Gowąh
 
 
 
+<<<<<<< HEAD
 -- INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (3100000, '4 bedrooms', '6 bathrooms', '3253', '663', '22nd St', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/IS33nqu2uufwgt1000000000.jpg', 2900500, '916-292-3093', '09-20-2020');
+=======
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (3495000, '4 bedrooms', '3.5 bathrooms', '2917', '3741', '22nd St', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/IS7ua69y907xrw1000000000.jpg', 3200000, '916-394-2945', '02-14-2020');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (2895000, '3 bedrooms', '2 bathrooms', '1900', '2459', 'Buchanan St', 'SF', 'CA', '94115', 'https://photos.zillowstatic.com/p_e/IS33z351i1hzaw1000000000.jpg', 2500000, '729-592-5992', '12-28-2020');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (3798000, '2 bedrooms', '2 bathrooms', '3550', '917', 'Bryant St', 'SF', 'CA', '94103', 'https://photos.zillowstatic.com/p_e/ISvkrrpsh6g13q0000000000.jpg', 3200000, '592-498-2891', '10-04-2019');
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (1695000, '3 bedrooms', '2 bathrooms', '1367', '3917', '18th St', 'SF', 'CA', '94114', 'https://photos.zillowstatic.com/p_e/IS7msyoowrylmw1000000000.jpg', 1300940, '415-928-2950', '10-29-2019');
+
+
+
+INSERT INTO homes (price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date) VALUES (3100000, '4 bedrooms', '6 bathrooms', '3253', '663', '22nd St', 'SF', 'CA', '94121', 'https://photos.zillowstatic.com/p_e/IS33nqu2uufwgt1000000000.jpg', 2900500, '916-292-3093', '09-20-2020');
+>>>>>>> 8299b94ab81e35ad5e98eee8c4d884da2e294d77

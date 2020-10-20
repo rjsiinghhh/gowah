@@ -50,4 +50,12 @@ if($_REQUEST['action'] === 'index'){
   echo json_encode($all_homes);
  }
 
+<<<<<<< HEAD
 ?>  
+=======
+
+
+
+
+?>
+>>>>>>> 8299b94ab81e35ad5e98eee8c4d884da2e294d77
