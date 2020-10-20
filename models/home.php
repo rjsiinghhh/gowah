@@ -1,4 +1,4 @@
-
+<?php
 $dbconn = null;
 if(getenv('DATABASE_URL')){ // if using the heroku database
 	$connectionConfig = parse_url(getenv('DATABASE_URL'));
@@ -12,7 +12,7 @@ if(getenv('DATABASE_URL')){ // if using the heroku database
 		"user=".$user." ".
 		"password=".$password." ".
 		"port=".$port." ".
-		"dbname=".$dbname
+		"dbname=".$gowahhomes
 	);
 } else { // if using the local database, change the dbname to be whatever your local database's name is
 	$dbconn = pg_connect("host=localhost dbname=phpapi");
@@ -23,7 +23,7 @@ if(getenv('DATABASE_URL')){ // if using the heroku database
 
 
 
-<?php
+
 $dbconn = pg_connect('host=localhost dbname=houses');
 
 class Home {
