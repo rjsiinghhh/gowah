@@ -14,7 +14,6 @@ class App extends React.Component {
     }
 
 
-
     componentDidMount = () => {
         this.updateHomes();
     }
@@ -106,44 +105,41 @@ class App extends React.Component {
         return <div>
 
             <div className="container">
-              <ul>
+                <div className="row">
+
                 {
                     this.state.homes.map(
                         (home) => {
-                            return <div className="container">
+                            return <div className="col m6">
 
-                            <li>
-
-                             <img className="pics" src={home.image_link} alt="home-pics"/><br/>
-                                Asking Price: ${home.price}<br/>
-                                {home.housenumber}<br/>
+                               <div className="card">
+                               <div className="card-image"><img src={home.image_link} alt="home-pics"/><br/></div>
+                                 <div className="card-content">
+                                Asking ${home.price}<br/>
+                                Address: {home.housenumber}<br />
                                 {home.streetname}<br/>
                                 {home.city},
                                  {home.state}<br/>
+                                  {home.zip}<br/>
                                 <details>
                                 {home.bedrooms}<br/>
                                 {home.bathrooms}<br/>
-                                Square FT:{home.squareft}
-
-
-
-                                 {home.zip}<br/>
-
+                                Square FT:{home.squareft}<br />
                                  Highest Bid: {home.bid_price}
-                                 <br/>For More Info {home.callback_phone}
+                                 <br/>For More Info {home.callback_phone}<br />
+                                 <form id={home.id} onSubmit={this.updateHome}>
+                                  <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
+                                  <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Number" /><br/>
+                                  <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
+                                  <input type="submit" value="Make An Offer" />
+                                    </form>
+                                  <button value={home.id} onClick={this.deleteHome}>
+                                          Sold!
+                                                                </button>
 
-                                <form id={home.id} onSubmit={this.updateHome}>
-                                    <input onKeyUp={this.changeUpdateHomeBid_price} type="text" placeholder="Make An Offer?" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomeCallback_phone} type="text" placeholder="Leave Your Number" /><br/>
-                                    <input onKeyUp={this.changeUpdateHomeSet_date} type="text" placeholder="Set An Appointment" /> <br />
-                                    <input type="submit" value="Make An Offer" />
-                                </form>
-                                <button value={home.id} onClick={this.deleteHome}>
-                                    Delete
-                                </button>
                                 {
-                          this.state.homes.filter(home => {
-                          return home.bid_price == home.id
+                                          this.state.homes.filter(home => {
+                                            return home.bid_price == home.id
                                           })
 
                                 .map((home, i) => {
@@ -151,6 +147,7 @@ class App extends React.Component {
                       <div key={i}>
                         <p>Name: {home.bid_price}</p>
                         <p>Rating: {home.callback_phone}</p>
+                        <p>Review: {home.set_date}</p>
                         <details>
                         <summary>Edit Bid</summary>
                         <form id={home._id} onSubmit={this.updateHome}>
@@ -162,7 +159,8 @@ class App extends React.Component {
                           onChange={this.handleChange}
                           placeholder={home.bid_price}
                         />
-
+                        <br />
+                        <label htmlFor="review_content">More Info</label>
                         <br />
                         <input
                           type="text"
@@ -174,7 +172,7 @@ class App extends React.Component {
                         <br />
                         <input className="submit" type="submit" value="Edit Review" />
                       </form>
-                      <button onClick={this.deleteHome} id={home._id}>delete</button>
+
                         </details>
                       </div>
 
@@ -182,24 +180,12 @@ class App extends React.Component {
                   })
                 }
 
-
-                <summary>Make An Offer?</summary>
-                <form onSubmit={this.createBid}>
-                  <input id='home_id' type='hidden' value={home.id} />
-                  <label htmlFor="name">Name: </label>
-                  <input id='name' type='text' onChange={this.bidChange} />
-                  <br/>
-                  <label htmlFor="review">Review: </label>
-                  <input id='review_content' type='text' onChange={this.bidChange} />
-                  <br/>
-
-                  <input className="submit" type="submit" value="Make An Offer" />
-                </form>
+                <summary>More Info</summary>
                 </details>
 
+                            </div>
+                            </div>
 
-
-                            </li>
 
 
                             </div>
@@ -208,8 +194,8 @@ class App extends React.Component {
                         }
                     )
                 }
-                </ul>
 
+                </div>
             </div>
 
         </div>
