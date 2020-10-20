@@ -21,7 +21,7 @@ class App extends React.Component {
     changeUpdateHomeName = (event) => {
         this.setState({
             updateHomeBid_price:event.target.value
-        })
+        })i
     }
 
     changeUpdateHomeCallback_phone = (event) => {
@@ -46,7 +46,6 @@ class App extends React.Component {
             }
         )
     }
-
     updateHome = (event) => {
         event.preventDefault();
         const id = event.target.getAttribute('id');
@@ -237,9 +236,6 @@ class App extends React.Component {
 
 }
 
-// const App = (props) => {
-//     return <h2>Functional {props.name}!</h2>
-// }
 
 ReactDOM.render(
     <App></App>,

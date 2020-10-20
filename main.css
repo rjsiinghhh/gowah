@@ -9,8 +9,17 @@ body {
     flex-direction: column;
     background-color: #e0ece4;
     text-align: center;
+<<<<<<< HEAD
+    background-color:red;
+    background-blend-mode: darken;
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    font-family: 'Inconsolata', monospace;
+=======
     font-family: 'Ubuntu', sans-serif;
     margin: 2em;
+>>>>>>> 4e4cd9bec506280f96cf015083376f9acd48a66d
 }
 
 main {

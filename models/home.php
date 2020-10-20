@@ -1,7 +1,23 @@
 
-
 <?php
-$dbconn = pg_connect('host=localhost dbname=houses');
+$dbconn = null;
+if(getenv('DATABASE_URL')){ // if using the heroku database 
+	$connectionConfig = parse_url(getenv('DATABASE_URL'));
+	$host = $connectionConfig['host'];
+	$user = $connectionConfig['user'];
+	$password = $connectionConfig['pass'];
+	$port = $connectionConfig['port'];
+	$dbname = trim($connectionConfig['path'],'/');
+	$dbconn = pg_connect(
+		"host=".$host." ".
+		"user=".$user." ".
+		"password=".$password." ".
+		"port=".$port." ".
+		"dbname=".$dbname
+	);
+} else { // if using the local database, change the dbname to be whatever your local database's name is 
+	$dbconn = pg_connect("host=localhost dbname=houses");
+}
 
 class Home {
     public $id;
@@ -74,8 +90,8 @@ class Homes {
   static function create($home){
     $query = "INSERT INTO homes (id, price, bedrooms, bathrooms, squareft, housenumber, streetname, city, state, zip, image_link, bid_price, callback_phone, set_date ) VALUES ($1, $2,$3,$4,$5,$6,$7,$8,$9,$10,$11, $12, $13, $14 )";
     $query_params = array(
-      $home->id,
-      $home->price,
+    $home->id,
+    $home->price,
     $home->bedrooms,
     $home->bathrooms,
     $home->squareft,
@@ -105,7 +121,7 @@ class Homes {
 
             $new_home = new Home(
                 intval($row_object->id),
-                intval($row_object->price),
+                $row_object->price,
                 $row_object->bedrooms,
                 $row_object->bathrooms,
                 $row_object->squareft,
@@ -129,9 +145,4 @@ class Homes {
         return $homes;
     }
 }
-
-
-
-
-
- ?>
+?>
