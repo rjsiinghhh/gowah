@@ -21,7 +21,7 @@ class App extends React.Component {
     changeUpdateHomeName = (event) => {
         this.setState({
             updateHomeBid_price:event.target.value
-        })
+        })i
     }
 
     changeUpdateHomeCallback_phone = (event) => {
